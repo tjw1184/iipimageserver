@@ -8,6 +8,8 @@ RUN apt-get -y update && \
     iipimage-server \
 && apt-get clean && rm -rf /tmp/* /var/tmp/*
 
+COPY startup.sh /usr/local/bin/startup.sh
+
 ## restart the apache2 web service to ensure it comes up correcly
 ##CMD service apache2 restart
-ENTRYPOINT ["/usr/local/bin/tini", "--", "service apache2 restart"]
+ENTRYPOINT ["/usr/local/bin/tini", "--", "/usr/local/bin/startup.sh"]
