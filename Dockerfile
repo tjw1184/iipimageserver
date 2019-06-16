@@ -17,4 +17,4 @@ VOLUME /pics
 
 ## restart the apache2 web service to ensure it comes up correcly
 ##CMD service apache2 restart
-ENTRYPOINT ["/usr/local/bin/tini", "--", "/bin/bash"]
+ENTRYPOINT ["/usr/local/bin/tini", "--", "/usr/local/bin/startup.sh"]
