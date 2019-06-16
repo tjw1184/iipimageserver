@@ -33,6 +33,10 @@ ADD https://github.com/openseadragon/openseadragon/releases/download/v2.4.0/open
 RUN tar -xvf /var/www/html/openseadragon/openseadragon.tar.gz -C /var/www/html/openseadragon --strip 1
 RUN rm -f /var/www/html/openseadragon/openseadragon.tar.gz
 
+## setup iipzoom php scripts
+COPY webfiles/iipzoom.php /var/www/html/iipzoom/iipzoom.php
+COPY webfiles/iipzoom_redirect.php /var/www/html/iipzoom.php
+
 ## document ports and volumes to be remapped
 EXPOSE 80
 VOLUME /pics
