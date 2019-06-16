@@ -1,0 +1,3 @@
+Files uploaded from zip file from
+http://sourceforge.net/projects/iipimage/files/IIPZoom/iipzoom-0.2.zip/download
+since I couldn't figure out how to download direct from sourceforge into the docker for setup
