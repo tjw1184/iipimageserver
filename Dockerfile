@@ -4,7 +4,7 @@ FROM krallin/ubuntu-tini:bionic
 
 ## update everything, install iipimage-server and cleanup
 RUN apt-get -y update && \
-    apt-get install -y --fix-missing apache2 libapache2-mod-fcgid git unzip nano && \
+    apt-get install -y --fix-missing apache2 libapache2-mod-fcgid git nano && \
     apt-get install -y --fix-missing iipimage-server && \
     apt-get clean && \
     rm -rf /tmp/* /var/tmp/*
@@ -28,9 +28,9 @@ RUN git clone https://github.com/ruven/iipmooviewer.git /var/www/html/iipmooview
 
 ## setup open seadragon - currently set to release 2.4.0
 RUN mkdir /var/www/html/openseadragon
-ADD https://github.com/openseadragon/openseadragon/releases/download/v2.4.0/openseadragon-bin-2.4.0.zip /var/www/html/openseadragon/openseadragon.zip
-RUN unzip /var/www/html/openseadragon/openseadragon.zip -d /var/www/html/openseadragon
-RUN rm -f /var/www/html/openseadragon/openseadragon.zip
+ADD https://github.com/openseadragon/openseadragon/releases/download/v2.4.0/openseadragon-bin-2.4.0.tar.gz /var/www/html/openseadragon/openseadragon.tar.gz
+RUN tar -xvf /var/www/html/openseadragon/openseadragon.tar.gz -C /var/www/html/openseadragon --strip 1
+RUN rm -f /var/www/html/openseadragon/openseadragon.tar.gz
 
 ## document ports and volumes to be remapped
 EXPOSE 80
