@@ -4,10 +4,15 @@
                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
                 <script type="text/javascript">
 
+                        // Updated server path
                         var server = "/iipsrv/iipsrv.fcgi";
+                        
+                        // Use php arguments to set image path
+                        // Since iipsrv base path set to /pics/ the incoming image name is RELATIVE to this path
 <?php
 echo                        'var image = "' . $_GET['image'] . '"; ';
 ?>
+                        // no credits
                         var credit = "";
                         var flashvars = {
                                 server: server,
