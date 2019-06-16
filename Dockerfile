@@ -13,6 +13,11 @@ RUN apt-get -y update && \
 COPY startup.sh /usr/local/bin/startup.sh
 RUN chmod +x /usr/local/bin/startup.sh
 
+## override default iipsrv.conf file
+COPY iipsrv.conf /etc/apache2/mods-available/iipsrv.conf
+RUN chown root:root /etc/apache2/mods-available/iipsrv.conf
+RUN chmod 644 /etc/apache2/mods-available/iipsrv.conf
+
 ## copy iipzoom files to container
 RUN mkdir /var/www/html/iipzoom
 COPY iipzoom/* /var/www/html/iipzoom/
