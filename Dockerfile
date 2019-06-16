@@ -3,10 +3,11 @@
 FROM krallin/ubuntu-tini:bionic
 
 ## update everything, install iipimage-server and cleanup
-RUN apt-get -y update && \
-    apt-get install -y --fix-missing apache2 libapache2-mod-fcgid git nano && \
-    apt-get install -y --fix-missing iipimage-server && \
-    apt-get clean && \
+## need to add debian frontend noninteractive otherwise tzdata package will hang waiting for input
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --fix-missing apache2 libapache2-mod-fcgid git php nano && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --fix-missing iipimage-server && \
+    DEBIAN_FRONTEND=noninteractive apt-get clean && \
     rm -rf /tmp/* /var/tmp/*
 
 ## copy startup script and set permissions
