@@ -37,6 +37,10 @@ RUN rm -f /var/www/html/openseadragon/openseadragon.tar.gz
 COPY webfiles/iipzoom.php /var/www/html/iipzoom/iipzoom.php
 COPY webfiles/iipzoom_redirect.php /var/www/html/iipzoom.php
 
+## setup iipmooviewer php scripts
+COPY webfiles/iipmooviewer.php /var/www/html/iipmooviewer/iipmooviewer.php
+COPY webfiles/iipmooviewer_redirect.php /var/www/html/iipmooviewer.php
+
 ## document ports and volumes to be remapped
 EXPOSE 80
 VOLUME /pics
