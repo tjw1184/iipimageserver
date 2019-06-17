@@ -68,7 +68,7 @@ echo '<title>' . $_GET['image'] . ' - IIPMooViewer Display</title>';
     
     // Image path on server, since iipsrv has base path set this is RELATIVE to \pics\
 <?php
-echo    'var image = \''  . $_GET['image'] . '\';';
+echo    '    var image = \''  . $_GET['image'] . '\';';
 ?>
 
     // Copyright or information message - None here
