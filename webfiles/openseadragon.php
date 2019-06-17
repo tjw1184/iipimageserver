@@ -51,6 +51,8 @@ echo '<title>' . $_GET['image'] . ' - Open Seadragon Display</title>';
         // allow scroll wheel to zoom in faster
         minScrollDeltaTime: 10,
         // tile source
+      	// Use php arguments to set image path
+       	// Since iipsrv base path set to /pics/ the incoming image name is RELATIVE to this path	    
 <?php
 echo        '   tileSources: "/iipsrv/iipsrv.fcgi?DeepZoom=' . $_GET['image'] . '.dzi",';
 ?>
