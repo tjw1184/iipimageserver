@@ -66,7 +66,8 @@ echo '<title>' . $_GET['image'] . ' - IIPMooViewer Display</title>';
     // Updated iipsrv path
     var server = '/iipsrv/iipsrv.fcgi';
     
-    // Image path on server, since iipsrv has base path set this is RELATIVE to \pics\
+    // Use php arguments to set image path
+    // Since iipsrv base path set to /pics/ the incoming image name is RELATIVE to this path
 <?php
 echo    '    var image = \''  . $_GET['image'] . '\';';
 ?>
