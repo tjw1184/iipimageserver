@@ -23,7 +23,7 @@ RUN chmod 644 /etc/apache2/mods-available/iipsrv.conf
 RUN mkdir /var/www/html/iipzoom
 COPY iipzoom/* /var/www/html/iipzoom/
 
-## setup iipmooviewer - will download latest, there are no tags on this project
+## setup iipmooviewer - will download latest, there are no tags on this project so may break in future
 RUN mkdir /var/www/html/iipmooviewer
 RUN git clone https://github.com/ruven/iipmooviewer.git /var/www/html/iipmooviewer
 
@@ -40,6 +40,10 @@ COPY webfiles/iipzoom_redirect.php /var/www/html/iipzoom.php
 ## setup iipmooviewer php scripts
 COPY webfiles/iipmooviewer.php /var/www/html/iipmooviewer/iipmooviewer.php
 COPY webfiles/iipmooviewer_redirect.php /var/www/html/iipmooviewer.php
+
+## setup openseadragon php scripts
+COPY webfiles/openseadragon.php /var/www/html/iipmooviewer/openseadragon.php
+COPY webfiles/openseadragon_redirect.php /var/www/html/openseadragon.php
 
 ## document ports and volumes to be remapped
 EXPOSE 80
