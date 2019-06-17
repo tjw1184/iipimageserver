@@ -3,12 +3,18 @@
 
  <head>
   <meta charset="utf-8" />
+  <meta name="description" content="IIPMooViewer Full Screen Viewer capable of taking an input image">
+  <meta name="author" content="https://github.com/tjw1184/iipimageserver">	 
+	 
+
+  <!--Preserve original ownership information from example page that was modified-->
   <meta name="DC.creator" content="Ruven Pillay &lt;ruven@users.sourceforge.netm&gt;"/>
   <meta name="DC.title" content="IIPMooViewer 2.0: HTML5 High Resolution Image Viewer"/>
   <meta name="DC.subject" content="IIPMooViewer; IIPImage; Visualization; HTML5; Ajax; High Resolution; Internet Imaging Protocol; IIP"/>
   <meta name="DC.description" content="IIPMooViewer is an advanced javascript HTML5 image viewer for streaming high resolution scientific images"/>
   <meta name="DC.rights" content="Copyright &copy; 2003-2016 Ruven Pillay"/>
   <meta name="DC.source" content="http://iipimage.sourceforge.net"/>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -42,8 +48,11 @@
   <link rel="shortcut icon" href="images/iip-favicon.png" />
   <link rel="apple-touch-icon" href="images/iip.png" />
 
-  <title>IIPMooViewer 2.0 :: HTML5 High Resolution Image Viewer</title>
+<?php
+echo '<title>' . $_GET['image'] . ' - IIPMooViewer Display</title>';
+?>
 
+	 
   <script src="js/mootools-core-1.6.0-compressed.js"></script>
   <script src="js/iipmooviewer-2.0-min.js"></script>
 
