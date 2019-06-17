@@ -20,8 +20,9 @@ echo '<title>' . $_GET['image'] . ' - IIPZoom Display</title>';
                         // Use php arguments to set image path
                         // Since iipsrv base path set to /pics/ the incoming image name is RELATIVE to this path
 <?php
-echo                        'var image = "' . $_GET['image'] . '"; ';
+echo                        '                        var image = "' . $_GET['image'] . '"; ';
 ?>
+			
                         // no credits
                         var credit = "";
                         var flashvars = {
