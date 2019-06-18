@@ -42,7 +42,7 @@ COPY webfiles/iipmooviewer.php /var/www/html/iipmooviewer/iipmooviewer.php
 COPY webfiles/iipmooviewer_redirect.php /var/www/html/iipmooviewer.php
 
 ## setup openseadragon php scripts
-COPY webfiles/openseadragon.php /var/www/html/iipmooviewer/openseadragon.php
+COPY webfiles/openseadragon.php /var/www/html/openseadragon/openseadragon.php
 COPY webfiles/openseadragon_redirect.php /var/www/html/openseadragon.php
 
 ## document ports and volumes to be remapped
