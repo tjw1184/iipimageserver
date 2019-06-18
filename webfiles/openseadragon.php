@@ -54,7 +54,7 @@ echo '<title>' . $_GET['image'] . ' - Open Seadragon Display</title>';
       	// Use php arguments to set image path
        	// Since iipsrv base path set to /pics/ the incoming image name is RELATIVE to this path	    
 <?php
-echo        '   tileSources: "/iipsrv/iipsrv.fcgi?DeepZoom=' . $_GET['image'] . '.dzi",';
+echo        '        tileSources: "/iipsrv/iipsrv.fcgi?DeepZoom=' . $_GET['image'] . '.dzi",';
 ?>
 
         // path to navigator images
