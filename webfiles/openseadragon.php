@@ -26,15 +26,15 @@ echo '<title>' . $_GET['image'] . ' - Open Seadragon Display</title>';
       padding: 0;
       margin: 0;
     }
-    position: absolute;
+    div#openseadragon1{
       height: 100%;
       min-height: 100%;
       width: 100%;
+      position: absolute;
       top: 0;
-      div#openseadragon1{
       left: 0;
       margin: 0;
-      padding: 0;
+      padding: 0;    
     }
   </style>
 
