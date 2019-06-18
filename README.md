@@ -3,9 +3,9 @@ Preconfigured IIPImage Server with Display Clients OpenSeaDragon, IIPZoom and II
 
 ## Usage
 
-Using this docker is extremely easy.  You need to put any images you want displayed in the folder mapped to /pics, and then just pass the filename to the correct webpage to display.  This filename is passed as a php argument in the web address.
+Using this docker is extremely easy.  You need to put any images you want displayed in the folder mapped to /pics, and then just pass the filename you want displayed.  This filename is passed as a php argument in the web address and is relative to /pics/.
 
-### To display your image 'image1.tif', assuming that your image was stored in /pics/image1.tif you would use:
+#### To display your image 'image1.tif', assuming that your image was stored in /pics/image1.tif you would use:
 * OpenSeaDragon
   * http://server:port/openseadragon.php?image=image1.tif
 * IIPZoom
@@ -13,7 +13,13 @@ Using this docker is extremely easy.  You need to put any images you want displa
 * IIPMooViewer
   * http://server:port/iipmooviewer.php?image=image1.tif
 
-
+#### To display images in subfolders, you would again just put the path relative to /pics/.  For picture /pics/subfolder/image1.tif you would use:
+* OpenSeaDragon
+  * http://server:port/openseadragon.php?image=subfolder/image1.tif
+* IIPZoom
+  * http://server:port/iipzoom.php?image=subfolder/image1.tif
+* IIPMooViewer
+  * http://server:port/iipmooviewer.php?image=subfolder/image1.tif
 
 ## Parameters
 
