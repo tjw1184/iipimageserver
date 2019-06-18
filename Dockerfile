@@ -7,6 +7,7 @@ ARG VCS_REF
 ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.name="IIPImageServer" \
+      org.label-schema.maintainer="tjw1184" \      
       org.label-schema.description="Preconfigured IIPImage Server with Display Clients OpenSeaDragon, IIPZoom and IIPMooViewer" \
       org.label-schema.url="https://github.com/tjw1184/iipimageserver" \
       org.label-schema.vcs-ref=$VCS_REF \
@@ -14,8 +15,6 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vendor="tjw1184" \
       org.label-schema.version=$VERSION \
       org.label-schema.schema-version="1.0"
-LABEL build_version="Version: ${VERSION} - Build-date: ${BUILD_DATE}"
-LABEL maintainer="tjw1184"
 
 ## update everything, install iipimage-server and cleanup
 ## need to add debian frontend noninteractive otherwise tzdata package will hang waiting for input
