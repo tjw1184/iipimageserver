@@ -1,4 +1,8 @@
 # [tjw1184/iipimageserver](https://github.com/tjw1184/iipimageserver)
+[![](https://images.microbadger.com/badges/image/tjw1184/iipimageserver.svg)](https://microbadger.com/images/tjw1184/iipimageserver "Get your own image badge on microbadger.com")
+![Docker Pulls](https://img.shields.io/docker/pulls/tjw1184/iipimageserver.svg)
+![Docker Stars](https://img.shields.io/docker/stars/tjw1184/iipimageserver.svg)
+
 Preconfigured IIPImage Server with Display Clients OpenSeaDragon, IIPZoom and IIPMooViewer.  This docker was built to learn these components, and provide an easy to use server for displaying gigapixel images with no configuration.
 
 ## Usage
