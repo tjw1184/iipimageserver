@@ -41,9 +41,9 @@ COPY iipzoom/* /var/www/html/iipzoom/
 RUN mkdir /var/www/html/iipmooviewer
 RUN git clone https://github.com/ruven/iipmooviewer.git /var/www/html/iipmooviewer
 
-## setup open seadragon - currently set to release 2.4.0
+## setup open seadragon - currently set to release 3.0.0
 RUN mkdir /var/www/html/openseadragon
-ADD https://github.com/openseadragon/openseadragon/releases/download/v2.4.0/openseadragon-bin-2.4.0.tar.gz /var/www/html/openseadragon/openseadragon.tar.gz
+ADD https://github.com/openseadragon/openseadragon/releases/download/v3.0.0/openseadragon-bin-3.0.0.tar.gz /var/www/html/openseadragon/openseadragon.tar.gz
 RUN tar -xvf /var/www/html/openseadragon/openseadragon.tar.gz -C /var/www/html/openseadragon --strip 1
 RUN rm -f /var/www/html/openseadragon/openseadragon.tar.gz
 
